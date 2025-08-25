@@ -40,6 +40,7 @@ function createBox() {
 // onclicking the plus button (adding a student)
 input.onclick = function () {
     overlay.style.display = 'block';
+    document.body.style.overflow = "hidden";
 }
 if (!window.localStorage.getItem('list')) {
     window.localStorage.setItem("list", JSON.stringify([]));
@@ -66,6 +67,7 @@ createBtn.onclick = function () {
         window.localStorage.setItem(`${inputFileds[0].value}`, `${inputFileds[1].value}`);
         createBox();
         overlay.style.display = 'none';
+        document.body.style.overflow = "auto";
         location.reload();
     }
     else {
@@ -78,6 +80,7 @@ createBtn.onclick = function () {
 
 cancelBtn.onclick = function () {
     overlay.style.display = 'none';
+    document.body.style.overflow = "auto";
 }
 let h1 = document.querySelectorAll('div > h1');
 // trash Btn click
