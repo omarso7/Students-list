@@ -1,0 +1,159 @@
+*{
+    margin: 0;
+    font-family: 'main-font';
+    box-sizing: border-box;
+    direction: rtl;
+}
+:root {
+    --gray:#EEEEEE;
+}
+@font-face {
+    font-family: 'main-font';
+    src: url(Tajawal-Regular.ttf);
+}
+.title {
+    width: fit-content;
+    margin: 20px auto;
+    font-size: 50px;
+}
+.container {
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.container > div {
+    width: 400px;
+    height: 200px;
+    display: grid;
+    grid-template-rows: 120px 80px;
+    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.301);
+    padding: 10px;
+    margin: 10px;
+    position: relative;
+}
+.input .circle {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin: auto;
+    background-color: var(--gray);
+    position: relative;
+    cursor: pointer;
+}
+.circle::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 2px;
+    height: 40px;
+    background-color: black;
+    border-radius: 5px;
+}
+.circle::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 40px;
+    height: 2px;
+    background-color: black;
+    border-radius: 5px;
+}
+div > h1 {
+    font-size: 30px;
+}
+a {
+    text-decoration: none;
+    color: black;
+    font-size: 25px;
+    font-weight: 500;
+    width: fit-content;
+
+}
+body > i:first-of-type {
+    display: none;
+}
+div > i {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    font-size: 25px;
+    color: red;
+    cursor: pointer;
+}
+.overlay {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    background-color: #0000008c;
+    transition: 0.3s;
+}
+.overlay .box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: var(--gray);
+    width: 300px;
+    height: 300px;
+    padding: 10px;
+    transition: 0.3s;
+}
+.box form {
+    margin-top: 40px;
+    width: 100%;
+}
+form input {
+    width: 100%;
+    margin-bottom: 10px;
+    outline: none;
+    height: 32px;
+    font-size: 20px;
+}
+.choose {
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+}
+.choose > div {
+    cursor: pointer;
+    padding: 10px 15px;
+    background-color: black;
+    border-radius: 10px;
+    color: white;
+}
+.create {
+    animation-duration: 0.3s;
+}
+@keyframes reject {
+    0%{
+        transform: translateX(0);
+    }
+    20% {
+        transform: translateX(10px);
+    }
+    40% {
+        transform: translateX(-10px);
+    }
+    60% {
+        transform: translateX(10px);
+    }
+    80% {
+        transform: translateX(-10px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
